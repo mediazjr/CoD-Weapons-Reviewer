@@ -5,5 +5,11 @@ header {
     text-align: center;
     font-size: 75px;
     color: white;
+    margin-bottom: 30%;
     background-image: linear-gradient(to bottom right, rgb(79, 39, 9), rgb(7, 55, 15));
+}
+
+.card {
+    margin: 3%;
+    background-image: none;
 }
