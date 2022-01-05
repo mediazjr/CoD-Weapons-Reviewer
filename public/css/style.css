@@ -6,7 +6,7 @@ header {
     text-align: center;
     font-size: 75px;
     color: white;
-    margin-bottom: 25%;
+    margin-bottom: 15%;
     background-image: linear-gradient(to bottom right, rgb(79, 39, 9), rgb(7, 55, 15));
     box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
 }
