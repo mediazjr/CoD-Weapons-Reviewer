@@ -11,5 +11,8 @@ header {
 
 .card {
     margin: 3%;
-    background-image: none;
+    background-clip: none;
+    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
+    width: 20%;
+    text-align: center;
 }
