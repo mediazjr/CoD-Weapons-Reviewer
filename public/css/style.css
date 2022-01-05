@@ -1,4 +1,5 @@
 header {
+    font-family: 'Kanit', sans-serif;
     border-style: solid;
     border-width: 5px;
     border-color: white;
@@ -7,9 +8,30 @@ header {
     color: white;
     margin-bottom: 30%;
     background-image: linear-gradient(to bottom right, rgb(79, 39, 9), rgb(7, 55, 15));
+    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
 }
 
 .card {
+    font-family: 'Kanit', sans-serif;
     margin: 3%;
-    background-image: none;
+    background-clip: none;
+    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
+    width: 20%;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(79, 39, 9), rgb(7, 55, 15));
 }
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+
+/* #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+} */
