@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS weapons_db;
+CREATE DATABASE weapons_db;
