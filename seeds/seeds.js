@@ -24,6 +24,17 @@ const seedDatabase = async () => {
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
+
+ 
+  
+  const review = await Review.bulkCreate(reviewData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+
+
+
   process.exit(0);
 };
 
