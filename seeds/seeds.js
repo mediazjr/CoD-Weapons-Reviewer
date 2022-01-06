@@ -24,14 +24,6 @@ const seedDatabase = async () => {
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }
-
-  // for (const review of reviewData) {
-  //   await Review.create({
-  //     ...review,
-  //     user_id: weapons[Math.floor(Math.random() * weapons.length)].id,
-  //   });
-  // }
-
   process.exit(0);
 };
 

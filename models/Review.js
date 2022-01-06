@@ -19,19 +19,20 @@ Review.init(
       type: DataTypes.STRING,
     },
 
-    weapon_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'weapon',
-        key: 'id',
-      }
-    },
-
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+
+    weapon_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'weapon',
+        key: 'id',
+      },
+    },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -40,6 +41,8 @@ Review.init(
       },
     },
   },
+
+
   {
     sequelize,
     timestamps: false,
