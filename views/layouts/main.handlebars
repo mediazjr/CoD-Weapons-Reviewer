@@ -23,6 +23,7 @@
         {{else}}
         <a href="/login">login</a>
         {{/if}}
+
       </nav>
     </header>
     <main class="container container-fluid mt-5">
@@ -38,6 +39,61 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+
+    </nav>
+
+    <header class="header">CoD Weapons Reviewer</header>
+    <style>
+        body {
+            background-image: url(../Images/call-of-duty-warzone-hd-wallpaper-1920x1080-uhdpaper.com-784.0_b.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+
+  
+
+    {{!-- <div class="container">
+        <div class="row justify-content-center w-100">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Submachine Guns</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Automatic Assault Rifles</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Sniper Rifles</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    </div> --}} 
+
+{{{body}}}
+
+ <!-- Render script for logged in users only -->
+ {{#if logged_in}}
+ <script src="/js/logout.js"></script>
+ {{/if}}
+
+
 </body>
 
 </html>

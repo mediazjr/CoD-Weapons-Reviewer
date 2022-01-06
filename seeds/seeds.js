@@ -18,6 +18,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+
   for (const review of reviewData) {
     await Review.create({
       ...review,
@@ -25,12 +26,15 @@ const seedDatabase = async () => {
     });
   }
 
-  // for (const review of reviewData) {
-  //   await Review.create({
-  //     ...review,
-  //     user_id: weapons[Math.floor(Math.random() * weapons.length)].id,
-  //   });
-  // }
+ 
+  
+  const review = await Review.bulkCreate(reviewData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+
+
 
   process.exit(0);
 };
