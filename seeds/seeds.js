@@ -18,6 +18,16 @@ const seedDatabase = async () => {
     returning: true,
   });
 
+
+  for (const review of reviewData) {
+    await Review.create({
+      ...review,
+      user_id: users[Math.floor(Math.random() * users.length)].id,
+    });
+  }
+
+ 
+  
   const review = await Review.bulkCreate(reviewData, {
     individualHooks: true,
     returning: true,
