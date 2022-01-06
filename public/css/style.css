@@ -1,3 +1,5 @@
+/* Header for landing page  */
+
 header {
     font-family: 'Kanit', sans-serif;
     border-style: solid;
@@ -11,9 +13,15 @@ header {
     box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
 }
 
-.h2 {
+
+/* Main page header 2 */
+
+.header-two-main {
     font-size: 25px;
 }
+
+
+/* Cards for landing page  */
 
 .card {
     font-family: 'Kanit', sans-serif;
@@ -32,11 +40,64 @@ header {
 }
 
 
-/* #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-} */
+/* Large card for page 2 */
+
+.card-page2 {
+    font-family: 'Keania One', cursive;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    height: 600px;
+    text-align: center;
+    margin-top: 8%;
+    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
+}
+
+.card-title {
+    font-size: 20px;
+    color: white;
+}
+
+
+/* NavBar for page 2*/
+
+.navbar {
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
+    background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(61, 60, 65));
+}
+
+.nav-link {
+    color: white;
+}
+
+
+/* Smaller cards for page 2 */
+
+.card2 {
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    margin: 10px;
+    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
+    background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(61, 60, 65));
+}
+
+.card2:hover {
+    transform: scale(1.1);
+}
+
+.card-title2 {
+    color: white;
+}
+
+
+/* header on page 2 */
+
+h2 {
+    font-size: 75px;
+    color: white;
+    background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(103, 101, 109));
+}
