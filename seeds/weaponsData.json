@@ -1,61 +1,61 @@
 [
     {
         "name": "MP5",
-        "description": dfaf
+        "description": "smg"
     },
 
     {
         "name": "Mac10",
-        "description": adfadf
+        "description": "smg"
     },
 
     {
         "name": "Bullfrog",
-        "description": sdfasdf
+        "description": "smg"
     },
 
     {
         "name": "LC110",
-        "description": asdfadsf
+        "description": "smg"
     }, 
 
     {
         "name": "Krig 6",
-        "description": sdfasdf
+        "description": "ar"
     },
 
     {
         "name": "Ffar",
-        "description": asdfasdf
+        "description": "ar"
     },
 
     {
         "name": "CR-56",
-        "description": asdfasdf
+        "description": "ar"
     },
 
     {
         "name": "XM4",
-        "description": asdfsd
+        "description": "ar"
     }, 
 
     {
         "name": "Swiss K31",
-        "description": sadfasdf
+        "description": "sniper"
     }, 
 
     {
         "name": "Kar98",
-        "description": asdfdsaf
+        "description": "sniper"
     }, 
 
     {
         "name": "Pelington 703",
-        "description": sadfasdf
+        "description": "sniper"
     }, 
 
     {
         "name": "HDR",
-        "description": fdsafasdf
+        "description": "sniper"
     }
 ]
