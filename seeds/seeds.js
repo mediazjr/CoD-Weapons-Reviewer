@@ -25,12 +25,12 @@ const seedDatabase = async () => {
     });
   }
 
-  for (const review of reviewData) {
-    await Review.create({
-      ...review,
-      user_id: weapons[Math.floor(Math.random() * weapons.length)].id,
-    });
-  }
+  // for (const review of reviewData) {
+  //   await Review.create({
+  //     ...review,
+  //     user_id: weapons[Math.floor(Math.random() * weapons.length)].id,
+  //   });
+  // }
 
   process.exit(0);
 };
