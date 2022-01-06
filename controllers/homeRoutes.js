@@ -1,19 +1,69 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { Review, User, Weapon } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+
+router.get('/', async (req, res) => {
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+    // Get all projects and JOIN with user data
+    const weaponData = await Weapon.findAll({
+      include: [
+        {
+          model: User, through: Review, as: "review_users", 
+          attributes: ['name'],
+        },
+      ],
     });
 
-    const users = userData.map((project) => project.get({ plain: true }));
+    // Serialize data so the template can read it
+    const weapons = weaponData.map((weapon) => weapon.get({ plain: true }));
 
-    res.render('homepage', {
-      users,
-      logged_in: req.session.logged_in,
+    // Pass serialized data and session flag into template
+    res.render('homepage', { 
+      weapons, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/weapon/:id', async (req, res) => {
+  try {
+    const weaponData = await Weapon.findByPk(req.params.id, {
+      include: [
+        {
+          model: User, through: Review, as: "review_users", 
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const weapon = weaponData.get({ plain: true });
+
+    res.render('review', {
+      ...weapon,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Use withAuth middleware to prevent access to route
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Review }],
+    });
+
+    const user = userData.get({ plain: true });
+
+    res.render('profile', {
+      ...user,
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
@@ -21,8 +71,9 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/profile');
     return;
   }
 
@@ -30,3 +81,4 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+

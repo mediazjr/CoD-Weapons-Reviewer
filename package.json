@@ -10,6 +10,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "node": "^17.3.0",
+    "nodemon": "^2.0.15",
     "sequelize": "^6.12.5"
   },
   "name": "cod-weapons-reviewer",
