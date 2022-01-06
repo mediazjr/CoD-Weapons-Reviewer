@@ -1,26 +1,26 @@
 const router = require('express').Router();
-const { Review, User } = require('../models');
+const { Review, User, Weapon } = require('../models');
 const withAuth = require('../utils/auth');
 
 
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    const reviewData = await Review.findAll({
+    const weaponData = await Weapon.findAll({
       include: [
         {
-          model: User,
+          model: User, through: Review, as: "review_users", 
           attributes: ['name'],
         },
       ],
     });
 
     // Serialize data so the template can read it
-    const reviews = reviewData.map((review) => review.get({ plain: true }));
+    const weapons = weaponData.map((weapon) => weapon.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      reviews, 
+      weapons, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -28,21 +28,21 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/review/:id', async (req, res) => {
+router.get('/weapon/:id', async (req, res) => {
   try {
-    const reviewData = await Review.findByPk(req.params.id, {
+    const weaponData = await Weapon.findByPk(req.params.id, {
       include: [
         {
-          model: User,
+          model: User, through: Review, as: "review_users", 
           attributes: ['name'],
         },
       ],
     });
 
-    const review = reviewData.get({ plain: true });
+    const weapon = weaponData.get({ plain: true });
 
-    res.render('project', {
-      ...review,
+    res.render('review', {
+      ...weapon,
       logged_in: req.session.logged_in
     });
   } catch (err) {
