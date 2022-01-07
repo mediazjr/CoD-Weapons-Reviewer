@@ -17,6 +17,7 @@
     border-color: black;
     justify-content: center;
     align-content: center;
+    margin: 3%;
     box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
     background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
 }
@@ -65,6 +66,7 @@ header {
     border-width: 3px;
     border-color: white;
     margin: 3%;
+    margin-top: 25%;
     box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
     text-align: center;
     color: white;
