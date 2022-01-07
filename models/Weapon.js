@@ -18,6 +18,10 @@ Weapon.init(
     description: {
       type: DataTypes.STRING,
     },
+
+    weapon_category: {
+      type:DataTypes.STRING,
+    }
   },
   {
     sequelize,
