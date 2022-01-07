@@ -17,15 +17,21 @@
     border-color: black;
     justify-content: center;
     align-content: center;
+    margin: 3%;
+    margin-top: 20%;
     box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
     background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
 }
 
 .headerMain {
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
     font-size: 35px;
     text-align: center;
     font-family: 'Keania One', cursive;
     color: white;
+    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
     background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
 }
 
@@ -34,37 +40,15 @@ h4 {
 }
 
 
-/* Header for landing page  */
-
-header {
-    font-family: 'Kanit', sans-serif;
-    border-style: solid;
-    border-width: 5px;
-    border-color: white;
-    text-align: center;
-    font-size: 75px;
-    color: white;
-    margin-bottom: 15%;
-    background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
-    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
-}
-
-
-/* Main page header 2 */
-
-.header-two-main {
-    font-size: 25px;
-}
-
-
-/* Cards for landing page  */
+/* Cards for weapons options  */
 
 .card {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Keania One', cursive;
     border-style: solid;
     border-width: 3px;
     border-color: white;
     margin: 3%;
+    margin-top: 15%;
     box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
     text-align: center;
     color: white;
