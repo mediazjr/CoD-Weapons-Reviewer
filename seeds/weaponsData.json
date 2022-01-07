@@ -2,72 +2,72 @@
     {
         "name": "MP5",
         "description": "smg",
-        "weapon_category": "Sub Machine Guns"
+        "weapon_category": "SubMachineGuns"
     },
 
     {
         "name": "Mac10",
         "description": "smg",
-        "weapon_category": "Sub Machine Guns"
+        "weapon_category": "SubMachineGuns"
     },
 
     {
         "name": "Bullfrog",
         "description": "smg",
-        "weapon_category": "Sub Machine Guns"
+        "weapon_category": "SubMachineGuns"
     },
 
     {
         "name": "LC110",
         "description": "smg",
-        "weapon_category": "Sub Machine Guns"
+        "weapon_category": "SubMachineGuns"
     },
 
     {
         "name": "Krig 6",
         "description": "ar",
-        "weapon_category": "Automatic Assault Rifles"
+        "weapon_category": "AutomaticAssaultRifles"
     },
 
     {
         "name": "Ffar",
         "description": "ar",
-        "weapon_category": "Automatic Assault Rifles"
+        "weapon_category": "AutomaticAssaultRifles"
     },
 
     {
         "name": "CR-56",
         "description": "ar",
-        "weapon_category": "Automatic Assault Rifles"
+        "weapon_category": "AutomaticAssaultRifles"
     },
 
     {
         "name": "XM4",
         "description": "ar",
-        "weapon_category": "Automatic Assault Rifles"
+        "weapon_category": "AutomaticAssaultRifles"
     },
 
     {
         "name": "Swiss K31",
         "description": "sniper",
-        "weapon_category": "Sniper Rifles"
+        "weapon_category": "SniperRifles"
     }, 
 
     {
         "name": "Kar98",
         "description": "sniper",
-        "weapon_category": "Sniper Rifles"
+        "weapon_category": "SniperRifles"
     }, 
 
     {
         "name": "Pelington 703",
         "description": "sniper",
-        "weapon_category": "Sniper Rifles"
+        "weapon_category": "SniperRifles"
     }, 
 
     {
         "name": "HDR",
         "description": "sniper",
-        "weapon_category": "Sniper Rifles"
+        "weapon_category": "SniperRifles"
     }
 ]

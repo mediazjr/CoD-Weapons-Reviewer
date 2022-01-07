@@ -28,9 +28,14 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/weapon/:id', async (req, res) => {
+router.get('/weapon/:weapon_category', async (req, res) => {
   try {
-    const weaponData = await Weapon.findByPk(req.params.id, {
+    const weaponData = await Weapon.findAll({
+      where: {
+        weapon_category: req.params.weapon_category
+      }
+    }, 
+       {
       include: [
         {
           model: User, through: Review, as: "review_users", 
@@ -39,10 +44,11 @@ router.get('/weapon/:id', async (req, res) => {
       ],
     });
 
-    const weapon = weaponData.get({ plain: true });
-// res.json(weapon)
+    const weapons = weaponData.map((weapon) => weapon.get({ plain: true }));
+// res.json(weapons)
     res.render('weapon', {
-      ...weapon,
+      weapons,
+      category: req.params.weapon_category.replace(/([a-z])([A-Z])/g, '$1 $2'),
       logged_in: req.session.logged_in
     });
   } catch (err) {
