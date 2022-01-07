@@ -18,15 +18,20 @@
     justify-content: center;
     align-content: center;
     margin: 3%;
+    margin-top: 20%;
     box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
     background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
 }
 
 .headerMain {
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
     font-size: 35px;
     text-align: center;
     font-family: 'Keania One', cursive;
     color: white;
+    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
     background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
 }
 
