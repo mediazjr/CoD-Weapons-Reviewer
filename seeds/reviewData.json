@@ -7,18 +7,22 @@
     },
 
     {
+      "name": "Fred",
+      "comment": "my go-to",
+      "weapon_id": 6,
+      "user_id": 2
+  },
+
+    {
         "name": "Mike",
         "comment": "this is the best sniper",
         "weapon_id": 11,
         "user_id": 3
-    },
-
-    {
-        "name": "Fred",
-        "comment": "my go-to",
-        "weapon_id": 6,
-        "user_id": 2
     }
+
+    
+
+   
   
   
   ]
