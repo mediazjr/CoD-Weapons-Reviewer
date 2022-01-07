@@ -1,61 +1,73 @@
 [
     {
         "name": "MP5",
-        "description": "smg"
+        "description": "smg",
+        "weapon_category": "Sub Machine Guns"
     },
 
     {
         "name": "Mac10",
-        "description": "smg"
+        "description": "smg",
+        "weapon_category": "Sub Machine Guns"
     },
 
     {
         "name": "Bullfrog",
-        "description": "smg"
+        "description": "smg",
+        "weapon_category": "Sub Machine Guns"
     },
 
     {
         "name": "LC110",
-        "description": "smg"
-    }, 
+        "description": "smg",
+        "weapon_category": "Sub Machine Guns"
+    },
 
     {
         "name": "Krig 6",
-        "description": "ar"
+        "description": "ar",
+        "weapon_category": "Automatic Assault Rifles"
     },
 
     {
         "name": "Ffar",
-        "description": "ar"
+        "description": "ar",
+        "weapon_category": "Automatic Assault Rifles"
     },
 
     {
         "name": "CR-56",
-        "description": "ar"
+        "description": "ar",
+        "weapon_category": "Automatic Assault Rifles"
     },
 
     {
         "name": "XM4",
-        "description": "ar"
-    }, 
+        "description": "ar",
+        "weapon_category": "Automatic Assault Rifles"
+    },
 
     {
         "name": "Swiss K31",
-        "description": "sniper"
+        "description": "sniper",
+        "weapon_category": "Sniper Rifles"
     }, 
 
     {
         "name": "Kar98",
-        "description": "sniper"
+        "description": "sniper",
+        "weapon_category": "Sniper Rifles"
     }, 
 
     {
         "name": "Pelington 703",
-        "description": "sniper"
+        "description": "sniper",
+        "weapon_category": "Sniper Rifles"
     }, 
 
     {
         "name": "HDR",
-        "description": "sniper"
+        "description": "sniper",
+        "weapon_category": "Sniper Rifles"
     }
 ]
