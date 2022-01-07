@@ -41,6 +41,28 @@ router.get('/weapon/:id', async (req, res) => {
 
     const weapon = weaponData.get({ plain: true });
 // res.json(weapon)
+    res.render('weapon', {
+      ...weapon,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/review/:id', async (req, res) => {
+  try {
+    const weaponData = await Weapon.findByPk(req.params.id, {
+      include: [
+        {
+          model: User, through: Review, as: "review_users", 
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const weapon = weaponData.get({ plain: true });
+// res.json(weapon)
     res.render('review', {
       ...weapon,
       logged_in: req.session.logged_in
@@ -55,13 +77,13 @@ router.get('/weapon/:id', async (req, res) => {
 router.get('/profile', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    // const userData = await User.findByPk(req.session.user_id, {
-    //   attributes: { exclude: ['password'] },
-    //   include: [{ model: Review }],
-    // });
-
-    // const user = userData.get({ plain: true });
-
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model:Weapon, through: Review, as: "user_reviews" }],
+    });
+    console.log(userData)
+    const user = userData.get({ plain: true });
+console.log(user)
     res.render('profile', {
       // ...user,
       // logged_in: true
