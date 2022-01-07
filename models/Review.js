@@ -21,25 +21,25 @@ Review.init(
 
     date_created: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: true,
       defaultValue: DataTypes.NOW,
     },
 
-    weapon_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'weapon',
-        key: 'id',
-      },
-    },
+  //   weapon_id: {
+  //     type: DataTypes.INTEGER,
+  //     references: {
+  //       model: 'weapon',
+  //       key: 'id',
+  //     },
+  //   },
 
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
+  //   user_id: {
+  //     type: DataTypes.INTEGER,
+  //     references: {
+  //       model: 'user',
+  //       key: 'id',
+  //     },
+  //   },
   },
 
 
