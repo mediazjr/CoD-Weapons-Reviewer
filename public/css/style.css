@@ -209,5 +209,8 @@ h3 {
 }
 
 #profile {
+    margin-left: 20%;
+    color: white;
     font-family: 'Keania One', cursive;
+    white-space: nowrap;
 }
