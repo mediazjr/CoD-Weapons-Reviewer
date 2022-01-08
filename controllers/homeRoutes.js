@@ -15,6 +15,7 @@ router.get('/', async(req, res) => {
             }, ],
         });
 
+
         // Serialize data so the template can read it
         const weapons = weaponData.map((weapon) => weapon.get({ plain: true }));
         // res.json(weapons)
@@ -84,7 +85,8 @@ router.get('/review/:id', async(req, res) => {
         // res.json(reviews)
         res.render('review', {
             ...reviews,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            backgroundImage: "/Images/WZ-FUTURE-003.jpg",
         });
     } catch (err) {
         res.status(500).json(err);
