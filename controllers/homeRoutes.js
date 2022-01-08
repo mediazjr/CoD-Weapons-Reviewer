@@ -20,6 +20,7 @@ router.get('/', async (req, res) => {
     // res.json(weapons)
     // Pass serialized data and session flag into template
     res.render('homepage', { 
+      backgroundImage: "/Images/landing.jpg",
       weapons, 
       logged_in: req.session.logged_in 
     });
@@ -44,9 +45,22 @@ router.get('/weapon/:weapon_category', async (req, res) => {
       ],
     });
 
+
+let backgroundImage;
+    if(req.params.weapon_category === "SniperRifles") {
+      backgroundImage = "/Images/page4.png"
+    } else if (req.params.weapon_category === "SubMachineGuns"){
+      backgroundImage ="/Images/page_2.jpg"
+    } else if (req.params.weapon_category === "AutomaticAssaultRifles") {
+      backgroundImage ="/Images/page_3.jpg"
+    }
+
+
+
     const weapons = weaponData.map((weapon) => weapon.get({ plain: true }));
 // res.json(weapons)
     res.render('weapon', {
+      backgroundImage,
       weapons,
       category: req.params.weapon_category.replace(/([a-z])([A-Z])/g, '$1 $2'),
       logged_in: req.session.logged_in
@@ -92,7 +106,7 @@ router.get('/profile', async (req, res) => {
 console.log(user)
     res.render('profile', {
       // ...user,
-      // logged_in: true
+      logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
