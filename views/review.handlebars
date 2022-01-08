@@ -1,6 +1,8 @@
 <div class="text-center">
   <h2>{{name}}'s Reviews</h2>
-  <h2>{{comment}}</h2>
+  <p2>{{#each user.reviews as |review|}}
+    {{> review-details}}
+    {{/each}}</p>
   {{!-- <p>Created by {{user.name}} on {{format_date date_created}}</p> --}}
   <p>
     
