@@ -190,3 +190,8 @@ h3 {
     box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
     background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
 }
+
+#logout {
+    color: white;
+    text-align: right;
+}
