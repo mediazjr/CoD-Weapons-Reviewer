@@ -214,3 +214,15 @@ h3 {
     font-family: 'Keania One', cursive;
     white-space: nowrap;
 }
+
+#review-comment {
+    margin-left: 20%;
+    color: white;
+    font-family: 'Keania One', cursive;
+    white-space: nowrap;
+}
+
+.btn {
+    margin-left: 50%;
+    margin-top: 20%;
+}
