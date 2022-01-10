@@ -1,14 +1,20 @@
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
+h2 {
+    font-size: 75px;
+    color: white;
+    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
+    background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
 }
 
+h3 {
+    font-size: 75px;
+    color: white;
+    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
+    background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
+}
 
-/* MAIN PAGE LOG IN */
+h4 {
+    color: white;
+}
 
 .cardMain {
     font-family: 'Keania One', cursive;
@@ -33,10 +39,6 @@
     color: white;
     box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
     background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
-}
-
-h4 {
-    color: white;
 }
 
 .form-group {
@@ -113,16 +115,6 @@ h4 {
 }
 
 
-/* header on page 2 */
-
-h2 {
-    font-size: 75px;
-    color: white;
-    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
-    background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
-}
-
-
 /* Styles for page 3 */
 
 .card-page3 {
@@ -181,14 +173,12 @@ h2 {
     color: white;
 }
 
+.btn {
+    margin-top: 1%;
+}
 
-/* header on page 3*/
-
-h3 {
-    font-size: 75px;
-    color: white;
-    box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
-    background-image: linear-gradient(to bottom right, rgb(30, 29, 35), rgb(119, 121, 90));
+.review-name {
+    font-size: larger;
 }
 
 #logout {
@@ -223,17 +213,11 @@ h3 {
     white-space: nowrap;
 }
 
-.btn {
-    margin-top: 1%;
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
 }
-
-.review-name {
-    font-size: larger;
-}
-
-
-/* .mb-3 {
-    width: 30%;
-    margin-left: 40%;
-    justify-content: center;
-} */
