@@ -22,6 +22,8 @@
                      <div class="card-body">
                     <h2 class="cardTitle">{{category}}</h2>
                 </div>
+<div class="row">
+                <div class="col-md-4">
                     {{#each weapons as |weapon|}} 
 
                      <div class="card2" style="width: 20rem;">
@@ -32,23 +34,19 @@
                     
                 </div>
                     {{/each }}
+        </div>
 
-<form class="new-review-form"> 
-                    <div class="mb-3">
-                     
-  <label for="exampleFormControlInput1" class="form-label">name</label>
-  <input type="text" class="form-control" id="review-name" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-  <textarea class="form-control" id="review-comment" rows="3"></textarea>
-</div>
-          <p>
-            <button class="btn btn-primary">Leave a new review!</button>
-          </p>
-        
-  </form>        
-                </div>
+        <div class="col-md-8">
+            <form class="new-review-form">         
+            <label for="exampleFormControlInput1" class="form-label"></label>
+            <input type="text" class="form-control" id="review-name" placeholder="Name">
+            <label for="exampleFormControlTextarea1" class="form-label"></label>
+            <textarea class="form-control" id="review-comment" rows="3" placeholder="Review"></textarea>
+                    <button class="btn btn-primary">Leave a new review!</button>
+            </form>   
+            </div>   
+            </div>  
+     </div>
     
     </div>
 

@@ -77,11 +77,6 @@ h4 {
     box-shadow: 10px 10px 5px rgba(21, 21, 21, 0.865);
 }
 
-.card-title {
-    font-size: 20px;
-    color: white;
-}
-
 
 /* NavBar for page 2*/
 
@@ -143,6 +138,11 @@ h2 {
 
 .card-title {
     font-size: 20px;
+    color: white;
+}
+
+.card-title a {
+    text-decoration: none;
     color: white;
 }
 
@@ -218,14 +218,22 @@ h3 {
 }
 
 #review-comment {
-    margin-left: 20%;
-    color: white;
+    color: black;
     font-family: 'Keania One', cursive;
     white-space: nowrap;
 }
 
 .btn {
-    margin-left: 50%;
-    margin-top: 20%;
-
+    margin-top: 1%;
 }
+
+.review-name {
+    font-size: larger;
+}
+
+
+/* .mb-3 {
+    width: 30%;
+    margin-left: 40%;
+    justify-content: center;
+} */

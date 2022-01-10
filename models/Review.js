@@ -3,53 +3,52 @@ const sequelize = require('../config/connection');
 
 class Review extends Model {}
 
-Review.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+Review.init({
+        id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        comment: {
+            type: DataTypes.STRING,
+        },
+
+        date_created: {
+            type: DataTypes.DATE,
+            allowNull: true,
+            defaultValue: DataTypes.NOW,
+        },
+
+        //   weapon_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //       model: 'weapon',
+        //       key: 'id',
+        //     },
+        //   },
+
+        //   user_id: {
+        //     type: DataTypes.INTEGER,
+        //     references: {
+        //       model: 'user',
+        //       key: 'id',
+        //     },
+        //   },
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    comment: {
-      type: DataTypes.STRING,
-    },
-
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: true,
-      defaultValue: DataTypes.NOW,
-    },
-
-  //   weapon_id: {
-  //     type: DataTypes.INTEGER,
-  //     references: {
-  //       model: 'weapon',
-  //       key: 'id',
-  //     },
-  //   },
-
-  //   user_id: {
-  //     type: DataTypes.INTEGER,
-  //     references: {
-  //       model: 'user',
-  //       key: 'id',
-  //     },
-  //   },
-  },
 
 
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'review',
-  }
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'review',
+    }
 );
 
 module.exports = Review;
