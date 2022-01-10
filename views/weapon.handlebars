@@ -27,14 +27,31 @@
                      <div class="card2" style="width: 20rem;">
                     <div class="card-body">
                         <h5 class="card-title2" data-id={{weapon.id}}>{{weapon.name}}</h5>
+                        
                     </div>
+                    
                 </div>
                     {{/each }}
+
+<form class="new-review-form"> 
+                    <div class="mb-3">
+                     
+  <label for="exampleFormControlInput1" class="form-label">name</label>
+  <input type="text" class="form-control" id="review-name" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+  <textarea class="form-control" id="review-comment" rows="3"></textarea>
+</div>
+          <p>
+            <button class="btn btn-primary">Leave a new review!</button>
+          </p>
         
+  </form>        
                 </div>
     
     </div>
 
-
+<script src="/js/profile.js" ></script>
 
  
