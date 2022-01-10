@@ -1,55 +1,54 @@
-   {{!-- <nav class="navbar navbar-expand-lg ">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Automatic Assault Rifles</a>
-                    <a class="nav-link" href="#">Sniper Rifles</a>
-                </div>
+{{!-- <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">Automatic Assault Rifles</a>
+                <a class="nav-link" href="#">Sniper Rifles</a>
             </div>
         </div>
-    </nav> --}}
-    
-    <div class="container-2">
-        <div class="row justify-content-center w-100">
-            <div class="card-page3" style="width: 80rem;">
+    </div>
+</nav> --}}
+
+<div class="container-2">
+    <div class="row justify-content-center w-100">
+        <div class="card-page3" style="width: 80rem;">
+            <div class="card-body">
+                <h3 class="cardTitle"></h3>
                 <div class="card-body">
-                    <h3 class="cardTitle"></h3>
-                     <div class="card-body">
                     <h2 class="cardTitle">{{category}}</h2>
                 </div>
-<div class="row">
-                <div class="col-md-4">
-                    {{#each weapons as |weapon|}} 
+                <div class="row">
+                    <div class="col-md-4">
+                        {{#each weapons as |weapon|}}
 
-                     <div class="card2" style="width: 20rem;">
-                    <div class="card-body">
-                        <h5 class="card-title2" data-id={{weapon.id}}>{{weapon.name}}</h5>
-                        
+                        <div class="card2" style="width: 20rem;">
+                            <div class="card-body">
+                                <h5 class="card-title2" data-id={{weapon.id}}>{{weapon.name}}</h5>
+
+                            </div>
+
+                        </div>
+                        {{/each }}
                     </div>
-                    
+
+                    <div class="col-md-8">
+                        <form class="new-review-form">
+                            <label for="exampleFormControlInput1" class="form-label"></label>
+                            <input type="text" class="form-control" id="review-name" placeholder="Name">
+                            <label for="exampleFormControlTextarea1" class="form-label"></label>
+                            <textarea class="form-control" id="review-comment" rows="3" placeholder="Review"></textarea>
+                            <button class="btn btn-primary">Leave a new review!</button>
+                        </form>
+                    </div>
                 </div>
-                    {{/each }}
+            </div>
+
         </div>
 
-        <div class="col-md-8">
-            <form class="new-review-form">         
-            <label for="exampleFormControlInput1" class="form-label"></label>
-            <input type="text" class="form-control" id="review-name" placeholder="Name">
-            <label for="exampleFormControlTextarea1" class="form-label"></label>
-            <textarea class="form-control" id="review-comment" rows="3" placeholder="Review"></textarea>
-                    <button class="btn btn-primary">Leave a new review!</button>
-            </form>   
-            </div>   
-            </div>  
-     </div>
-    
-    </div>
-
-<script src="/js/profile.js" ></script>
-
- 
+        <script src="/js/profile.js"></script>
