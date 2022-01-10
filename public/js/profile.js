@@ -1,14 +1,16 @@
+let id;
+
 const newFormHandler = async(event) => {
     event.preventDefault();
 
     const name = document.querySelector('#review-name').value.trim();
     const comment = document.querySelector('#review-comment').value.trim();
-
+    console.log(name, comment)
 
     if (name && comment) {
         const response = await fetch(`/api/reviews`, {
             method: 'POST',
-            body: JSON.stringify({ name, comment }),
+            body: JSON.stringify({ name, comment, weapon_id: id }),
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -24,17 +26,17 @@ const newFormHandler = async(event) => {
 
 const delButtonHandler = async(event) => {
     if (event.target.hasAttribute('data-id')) {
-        const id = event.target.getAttribute('data-id');
+        id = event.target.getAttribute('data-id');
+        console.log(id)
+            // const response = await fetch(`/api/reviews/${id}`, {
+            //     method: 'DELETE',
+            // });
 
-        const response = await fetch(`/api/reviews/${id}`, {
-            method: 'DELETE',
-        });
-
-        if (response.ok) {
-            document.location.replace('/');
-        } else {
-            alert('Failed to delete review');
-        }
+        // if (response.ok) {
+        //     document.location.replace('/');
+        // } else {
+        //     alert('Failed to delete review');
+        // }
     }
 };
 
@@ -43,5 +45,5 @@ document
     .addEventListener('submit', newFormHandler);
 
 document
-    .querySelector('.review-list')
+    .querySelector('.card-body')
     .addEventListener('click', delButtonHandler);
