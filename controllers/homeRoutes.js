@@ -33,17 +33,20 @@ const withAuth = require('../utils/auth');
 // Use withAuth middleware to prevent access to route
 router.get('/', async(req, res) => {
     try {
-        // Find the logged in user based on the session ID
+        console.log("this is session", req.session)
+            // Find the logged in user based on the session ID
+        if (!req.session.user_id) return res.redirect('/login');
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [{ model: Weapon, through: Review, as: "user_reviews" }],
         });
-        // console.log(userData)
+        console.log(userData)
         const user = userData.get({ plain: true });
         // console.log(user)
         res.render('profile', {
             backgroundImage: "/Images/landing.jpg",
             ...user,
+            user_id: req.session.user_id,
             logged_in: true
         });
     } catch (err) {
@@ -84,6 +87,7 @@ router.get('/weapon/:weapon_category', async(req, res) => {
         res.render('weapon', {
             backgroundImage,
             weapons,
+            user_id: req.session.user_id,
             category: req.params.weapon_category.replace(/([a-z])([A-Z])/g, '$1 $2'),
             logged_in: req.session.logged_in
         });
@@ -107,6 +111,7 @@ router.get('/review/:id', async(req, res) => {
         // res.json(reviews)
         res.render('review', {
             ...reviews,
+            user_id: req.session.user_id,
             logged_in: req.session.logged_in,
             backgroundImage: "/Images/WZ-FUTURE-003.jpg",
         });

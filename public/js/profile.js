@@ -17,7 +17,7 @@ const newFormHandler = async(event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/review/4');
         } else {
             document.location.replace('/login');
         }

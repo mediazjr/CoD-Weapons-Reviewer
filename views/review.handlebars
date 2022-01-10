@@ -2,13 +2,13 @@
 
  
 
-  <h2 id="userReview review-name" > {{name}}'s Reviews</h2>
+  <h2 id="userReview" > {{name}}'s Reviews</h2>
 
    {{#each  user_reviews as |review|}}
 
-  <p id="review-comment">{{review.review.name}}: {{review.name}}</p>
-  <p id="review-comment">{{review.review.comment}}</p>
-  <p id="review-comment">{{review.review.date_created}}</p>
+  <p id="reviews" class="review-name">{{review.review.name}}: {{review.name}}</p>
+  <p id="reviews">{{review.review.comment}} ({{format_date review.review.date_created}})</p>
+  <p id="reviews"></p>
     {{/each}} 
   {{!-- <p>Created by {{user.name}} on {{format_date date_created}}</p> --}}
  
@@ -16,7 +16,7 @@
 
         </div>
           <p>
-            <button class="btn btn-primary">Leave a new review!</button>
+            <a href="/"><button class="btn btn-primary">Leave a new review!</button></a>
           </p>
         </div>
 
