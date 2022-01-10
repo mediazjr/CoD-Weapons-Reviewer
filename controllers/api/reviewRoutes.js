@@ -2,6 +2,12 @@ const router = require('express').Router();
 const { Review } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+router.get('/:id', (req, res) => {
+    Review.findByPk().then((data) => {
+        res.json(data);
+    });
+});
+
 router.post('/', withAuth, async(req, res) => {
     try {
         const newReview = await Review.create({
