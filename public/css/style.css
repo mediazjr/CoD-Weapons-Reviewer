@@ -202,6 +202,7 @@ h3 {
     color: white;
     font-family: 'Keania One', cursive;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 #userReview {
@@ -213,6 +214,7 @@ h3 {
     color: white;
     font-family: 'Keania One', cursive;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 #review-comment {
@@ -225,4 +227,5 @@ h3 {
 .btn {
     margin-left: 50%;
     margin-top: 20%;
+
 }
