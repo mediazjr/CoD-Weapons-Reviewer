@@ -42,8 +42,8 @@
         {{#if logged_in}}
         <a href="/profile"></a> |
         <a id="logout">Logout</a>
-        <a id="profile">Weapon Selection</a>
-        <a id="reviews">Your Reviews</a>
+        <a id="profile" href="/">Weapon Selection</a>
+        <a id="reviews" href="/review/1">Your Reviews</a>
         {{else}}
         <a href="/login"></a>
         {{/if}}
@@ -69,7 +69,6 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
-
 
 </body>
 
