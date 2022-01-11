@@ -12,7 +12,7 @@ Once I make a selection, I want to see a list of various guns from the selected 
 
 ## Deployed App
 
-[CoD Weapon Reviewer]()
+[CoD Weapon Reviewer](https://nameless-plains-70878.herokuapp.com/login)
 
 ## Screenshots
 
