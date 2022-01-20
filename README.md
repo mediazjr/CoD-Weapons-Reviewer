@@ -34,10 +34,11 @@ Once I make a selection, I want to see a list of various guns from the selected 
 
 [Mario Diaz](https://github.com/mediazjr)
 
-## License 
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Questions
 
 If you have any questions, feel free to [email](mediazjr@gmail.com) me!
+
+## License 
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
