@@ -40,4 +40,4 @@ Once I make a selection, I want to see a list of various guns from the selected 
 
 ## Questions
 
-If you have any questions, feel free to email me at mediazjr@gmail,com!
+If you have any questions, feel free to [email](mediazjr@gmail.com) me!
